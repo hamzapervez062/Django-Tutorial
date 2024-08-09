@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Fees</th>
+        </tr>
+        {% for student in stu %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.date }}</td>
+            <td>{{ student.fees }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Teacher</h1>    
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Salary</th>
+        </tr>
+        {% for teacher in tea %}
+        <tr>
+            <td>{{ teacher.id }}</td>
+            <td>{{ teacher.name }}</td>
+            <td>{{ teacher.age }}</td>
+            <td>{{ teacher.date }}</td>
+            <td>{{ teacher.salary }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Staff</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>payment</th>
+        </tr>
+        {% for staff in con %}
+        <tr>
+            <td>{{ staff.id }}</td>
+            <td>{{ staff.name }}</td>
+            <td>{{ staff.age }}</td>
+            <td>{{ staff.date }}</td>
+            <td>{{ staff.payment }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

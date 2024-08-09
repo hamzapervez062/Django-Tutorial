@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color:red;
+        }
+        .success{
+            color:green;
+        }
+        .danger{
+            color:red;
+        }
+        .errorlist{
+            color:blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+       {{form.non_field_errors}}
+       {%for field in form%}
+       <br>
+            {{ field.label_tag}} 
+             {{field}} 
+
+            {%if field.errors%}
+                <span class="errorlist">
+                    {{field.errors|striptags}}
+                </span>
+            {%endif%}
+        {%endfor%} 
+        
+        <input type="submit" value="Submit">	
+        {%if messages%}
+            {%for message in messages%}
+            {%if message.tags%}
+                <p class="{{message.tags}}">
+                    {{message}}
+                </p>
+            {%endif%}
+
+            {%endfor%}
+    {%endif%}
+    </form>
+    <a href="{%url 'signup'%}">Signup</a>
+    
+    
+</body>
+</html>

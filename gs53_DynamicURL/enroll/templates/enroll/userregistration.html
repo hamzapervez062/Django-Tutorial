@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Students INFO</title>
+     <!-- Custom styles for this template -->
+     {% comment %} <link href='{% static "enroll/css/style.css" %}' rel="stylesheet" /> {% endcomment %}
+    
+</head>
+<body>
+    <h1>Students Registration</h1>  
+    <a href="{% url 'home' %}">Back to home</a>
+    <br>
+    <form action="" method='post' novalidate>
+        {% csrf_token %}
+        
+        {{form.non_field_errors}}
+
+        {% for field in form %}
+            <div class="form-group">
+                {{field.label_tag}} <br>
+                {{field}}
+
+                {% for error in field.errors  %}
+                <span class="errorlist">
+                    {{error}}
+                </span>
+                {% endfor %}
+                
+            </div>
+        {% endfor %}
+       
+        {% comment %} {{form.as_table}} {% endcomment %}
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+  
+</body>
+</html>

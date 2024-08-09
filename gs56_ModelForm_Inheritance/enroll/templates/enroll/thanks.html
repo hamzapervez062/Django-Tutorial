@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Welcome </h1>
+    {% comment %} {% if student %}
+        <h2>Student Form</h2>
+        <p>Student Name: {{ student.name }}</p>
+        <p>Student Roll: {{ student.roll }}</p>
+        <p>Student City: {{ student.city }}</p>
+        <p>Student Marks: {{ student.marks }}</p>
+    {% endif %} {% endcomment %}
+
+    {% for t in pi %}
+        <h2>Teacher Form</h2>
+        <p>Teacher Name: {{ t.teacher_name }}</p>
+     {% endfor %}  
+
+</body>
+</html>

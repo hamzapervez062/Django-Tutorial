@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Students INFO</title>
+     <!-- Custom styles for this template -->
+    <link href='{% static "enroll/css/style.css" %}' rel="stylesheet" />
+</head>
+<body>
+    <h1>Students INFO</h1>  
+    <p>this is {{stud}}</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    {%for st in stud%}
+        <tr>
+            <td>{{st.stuo_id}}</td>
+            <td>{{st.name}}</td>
+            <td>{{st.email}}</td>
+            <td>{{st.password}}</td>
+        </tr>
+    {%endfor%}
+    </table>   
+    
+</body>
+</html>

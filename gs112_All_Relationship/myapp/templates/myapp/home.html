@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        {% for user in data1 %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<hr>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Cat</th>
+        </tr>
+        {% for use in data3 %}
+        <tr>
+            <td>{{ use.id }}</td>
+            <td>{{ use.username }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<hr>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        {% for use in data4 %}
+        <tr>
+            <td>{{ use.id }}</td>
+            <td>{{ use.username }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        {% for user in data5 %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

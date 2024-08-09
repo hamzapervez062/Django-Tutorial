@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Page Name</th>
+            <th>Cat</th>
+        </tr>
+        {% for use in data %}
+        <tr>
+            <td>{{ use.user}}</td>
+            <td>{{ use.page_name }}</td>
+            <td>{{ use.page_cat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
